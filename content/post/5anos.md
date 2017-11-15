@@ -28,7 +28,7 @@ draft: false
     "transform":[{"filter": {"timeUnit": "year", "field": "DataInformacao", "range":[2012,2017]
         }
        }],
-     "mark": "bar",
+     "mark": "area",
      "width": 900,
      "height": 350,
         "encoding": {
