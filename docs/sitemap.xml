@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://thiagosantos18.github.io/acudeBoqueirao/post/mediasanuais/</loc>
+    <lastmod>2017-11-15T16:29:39-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://thiagosantos18.github.io/acudeBoqueirao/post/5anos/</loc>
+    <lastmod>2017-11-15T16:29:14-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://thiagosantos18.github.io/acudeBoqueirao/post/sangria/</loc>
+    <lastmod>2017-11-15T16:29:06-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://thiagosantos18.github.io/acudeBoqueirao/</loc>
+    <lastmod>2017-11-15T16:29:39-03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://thiagosantos18.github.io/acudeBoqueirao/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://thiagosantos18.github.io/acudeBoqueirao/post/</loc>
+    <lastmod>2017-11-15T16:29:39-03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://thiagosantos18.github.io/acudeBoqueirao/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

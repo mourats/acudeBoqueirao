@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Açude de Boqueirão</title>
+    <link>https://thiagosantos18.github.io/acudeBoqueirao/</link>
+    <description>Recent content on Açude de Boqueirão</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>thiago.moura@ccc.ufcg.edu.br (Thiago Moura)</managingEditor>
+    <webMaster>thiago.moura@ccc.ufcg.edu.br (Thiago Moura)</webMaster>
+    <lastBuildDate>Wed, 15 Nov 2017 16:29:39 -0300</lastBuildDate>
+    
+	<atom:link href="https://thiagosantos18.github.io/acudeBoqueirao/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Acompanhe as médias anuais do açude desde 1990!</title>
+      <link>https://thiagosantos18.github.io/acudeBoqueirao/post/mediasanuais/</link>
+      <pubDate>Wed, 15 Nov 2017 16:29:39 -0300</pubDate>
+      <author>thiago.moura@ccc.ufcg.edu.br (Thiago Moura)</author>
+      <guid>https://thiagosantos18.github.io/acudeBoqueirao/post/mediasanuais/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Últimos 5 anos do açude!</title>
+      <link>https://thiagosantos18.github.io/acudeBoqueirao/post/5anos/</link>
+      <pubDate>Wed, 15 Nov 2017 16:29:14 -0300</pubDate>
+      <author>thiago.moura@ccc.ufcg.edu.br (Thiago Moura)</author>
+      <guid>https://thiagosantos18.github.io/acudeBoqueirao/post/5anos/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Quantas vezes o açude sangrou desde 1990?</title>
+      <link>https://thiagosantos18.github.io/acudeBoqueirao/post/sangria/</link>
+      <pubDate>Wed, 15 Nov 2017 16:29:06 -0300</pubDate>
+      <author>thiago.moura@ccc.ufcg.edu.br (Thiago Moura)</author>
+      <guid>https://thiagosantos18.github.io/acudeBoqueirao/post/sangria/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Açude de Boqueirão</title>
+    <link>https://thiagosantos18.github.io/acudeBoqueirao/categories/</link>
+    <description>Recent content in Categories on Açude de Boqueirão</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>thiago.moura@ccc.ufcg.edu.br (Thiago Moura)</managingEditor>
+    <webMaster>thiago.moura@ccc.ufcg.edu.br (Thiago Moura)</webMaster>
+    
+	<atom:link href="https://thiagosantos18.github.io/acudeBoqueirao/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>

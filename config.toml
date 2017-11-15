@@ -1,0 +1,41 @@
+baseURL = "https://thiagosantos18.github.io/acudeBoqueirao/"
+
+baseurl = "https://username.github.io"
+DefaultContentLanguage = "en"
+#DefaultContentLanguage = "ja"
+title = "Açude de Boqueirão"
+theme = "beautifulhugo"
+metaDataFormat = "yaml"
+pygmentsUseClasses = true
+pygmentCodeFences = true
+#disqusShortname = "XXX"
+#googleAnalytics = "XXX"
+publishDir = "docs"
+
+[Params]
+  subtitle = "Breve história do açude Boqueirão"
+  logo = "img/avatar-icon.png"
+  favicon = "img/favicon.ico"
+  dateFormat = "15 Novembro, 2017"
+  commit = false
+  rss = true
+  comments = true
+#  gcse = "012345678901234567890:abcdefghijk" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
+
+#[[Params.bigimg]]
+#  src = "img/triangle.jpg"
+#  desc = "Triangle"
+#[[Params.bigimg]]
+#  src = "img/sphere.jpg"
+#  desc = "Sphere"
+#[[Params.bigimg]]
+#  src = "img/hexagon.jpg"
+#  desc = "Hexagon"
+
+[Author]
+  name = "Thiago Moura"
+  email = "thiago.moura@ccc.ufcg.edu.br"
+  facebook = "thiago.santos.12382"
+  github = "thiagosantos18"
+  linkedin = "thiago-santos-425357148"
+  
