@@ -6,17 +6,11 @@ draft: false
 
 <!--more-->
 
-
-<html>
-<head></head>
-<body>
-<h3>
 Em 2017 nós passamos pela maior seca no açude boqueirão desde 1990. E por conta disso, é difícil lembrar da última vez em que o açude sangrou e virou ponto turístico onde as pessoas iam tirar fotos e registrar a fartura de água no açude.  
 
 De 1990 até hoje, o açude de boqueirão já sangrou 14 vezes, sendo a ultima vez em agosto de 2011. Crianças de 6 anos de idade nunca viram o açude transbordar! Entre essas sangrias, a maior delas foi a de março de 2008, quando o açude atingiu incríveis 110% de sua capacidade. 
 
 Todas essas informações podem ser vistas no gráfico abaixo:
-</h3>
 
 <div id="vis" width=300></div>
 
@@ -57,5 +51,3 @@ Todas essas informações podem ser vistas no gráfico abaixo:
 };
   	vegaEmbed('#vis', spec).catch(console.warn);
 </script>
-</body>
-</html>

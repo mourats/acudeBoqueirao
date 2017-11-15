@@ -7,13 +7,12 @@ draft: false
 <!--more-->
 
 
-<html>
-<head></head>
-<body>
-<h3> Tempos de seca! Mas essa seca não pode ter ocorrido do dia pra noite certo? De fato não ocorreu, em janeiro de 2012 o açude estava com 90,8% de sua capacidade, ou seja, 373.600.000 metro cúbicos de água! 
+
+Tempos de seca! Mas essa seca não pode ter ocorrido do dia pra noite certo? De fato não ocorreu, em janeiro de 2012 o açude estava com 90,8% de sua capacidade, ou seja, 373.600.000 metro cúbicos de água! 
 
 Podemos perceber no gráfico abaixo que nossa água apenas foi se esvaindo durante esses cinco anos, tendo chegado ao percentual de 2,90% em abril desse ano, graças a Transposição do Rio São Francisco esses números estão subindo, e hoje estamos com 9,3% de água. 
-</h3>
+
+
 <div id="vis" width=300></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vega/3.0.7/vega.js"></script>
@@ -73,5 +72,4 @@ Podemos perceber no gráfico abaixo que nossa água apenas foi se esvaindo duran
 };
   	vegaEmbed('#vis', spec).catch(console.warn);
 </script>
-</body>
-</html>
+

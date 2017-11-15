@@ -167,74 +167,69 @@
       <article role="main" class="blog-post">
         <p></p>
 
-<p><html>
-<head></head>
-<body>
-<h3> Tempos de seca! Mas essa seca não pode ter ocorrido do dia pra noite certo? De fato não ocorreu, em janeiro de 2012 o açude estava com 90,8% de sua capacidade, ou seja, 373.600.000 metro cúbicos de água!</p>
+<p>Tempos de seca! Mas essa seca não pode ter ocorrido do dia pra noite certo? De fato não ocorreu, em janeiro de 2012 o açude estava com 90,8% de sua capacidade, ou seja, 373.600.000 metro cúbicos de água!</p>
 
-<p>Podemos perceber no gráfico abaixo que nossa água apenas foi se esvaindo durante esses cinco anos, tendo chegado ao percentual de 2,90% em abril desse ano, graças a Transposição do Rio São Francisco esses números estão subindo, e hoje estamos com 9,3% de água.
-</h3>
-<div id="vis" width=300></div></p>
+<p>Podemos perceber no gráfico abaixo que nossa água apenas foi se esvaindo durante esses cinco anos, tendo chegado ao percentual de 2,90% em abril desse ano, graças a Transposição do Rio São Francisco esses números estão subindo, e hoje estamos com 9,3% de água.</p>
 
-<p><script src="https://cdnjs.cloudflare.com/ajax/libs/vega/3.0.7/vega.js"></script>
+<div id="vis" width=300></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vega/3.0.7/vega.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vega-lite/2.0.1/vega-lite.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vega-embed/3.0.0-rc7/vega-embed.js"></script>
 <script>
     const spec = {
-  &ldquo;$schema&rdquo;: &ldquo;<a href="https://vega.github.io/schema/vega-lite/v2.json&quot;">https://vega.github.io/schema/vega-lite/v2.json&quot;</a>,
-      &ldquo;data&rdquo;: {<br />
-        &ldquo;url&rdquo;:&ldquo;<a href="https://api.insa.gov.br/reservatorios/12172/monitoramento&quot;">https://api.insa.gov.br/reservatorios/12172/monitoramento&quot;</a>,
-        &ldquo;format&rdquo;: {
-            &ldquo;type&rdquo;: &ldquo;json&rdquo;,
-            &ldquo;property&rdquo;: &ldquo;volumes&rdquo;,
-            &ldquo;parse&rdquo;:{
-              &ldquo;DataInformacao&rdquo;: &ldquo;utc:&lsquo;%d/%m/%Y&rsquo;&rdquo;
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
+      "data": {     
+        "url":"https://api.insa.gov.br/reservatorios/12172/monitoramento",
+        "format": {
+            "type": "json",
+            "property": "volumes",
+            "parse":{
+              "DataInformacao": "utc:'%d/%m/%Y'"
             }
         }
     },
-  &ldquo;vconcat&rdquo;: [{
-    &ldquo;width&rdquo;: 680,
-        &ldquo;transform&rdquo;:[{&ldquo;filter&rdquo;: {&ldquo;timeUnit&rdquo;: &ldquo;year&rdquo;, &ldquo;field&rdquo;: &ldquo;DataInformacao&rdquo;, &ldquo;range&rdquo;:[2012,2017]
+  "vconcat": [{
+    "width": 680,
+        "transform":[{"filter": {"timeUnit": "year", "field": "DataInformacao", "range":[2012,2017]
         }
        }],
-    &ldquo;mark&rdquo;: &ldquo;area&rdquo;,
-    &ldquo;encoding&rdquo;: {
-      &ldquo;x&rdquo;: {
-        &ldquo;field&rdquo;: &ldquo;DataInformacao&rdquo;,
-        &ldquo;type&rdquo;: &ldquo;temporal&rdquo;,
-        &ldquo;scale&rdquo;: {&ldquo;domain&rdquo;: {&ldquo;selection&rdquo;: &ldquo;brush&rdquo;}},
-        &ldquo;axis&rdquo;: {&ldquo;title&rdquo;: &ldquo;&rdquo;}
+    "mark": "area",
+    "encoding": {
+      "x": {
+        "field": "DataInformacao",
+        "type": "temporal",
+        "scale": {"domain": {"selection": "brush"}},
+        "axis": {"title": ""}
       },
-      &ldquo;y&rdquo;: {&ldquo;field&rdquo;: &ldquo;Volume&rdquo;,&ldquo;type&rdquo;: &ldquo;quantitative&rdquo;, &ldquo;title&rdquo;: &ldquo;&rdquo;}
+      "y": {"field": "Volume","type": "quantitative", "title": ""}
     }
   }, {
-        &ldquo;transform&rdquo;:[{&ldquo;filter&rdquo;: {&ldquo;timeUnit&rdquo;: &ldquo;year&rdquo;, &ldquo;field&rdquo;: &ldquo;DataInformacao&rdquo;, &ldquo;range&rdquo;:[2012,2017]
+        "transform":[{"filter": {"timeUnit": "year", "field": "DataInformacao", "range":[2012,2017]
         }
        }],
-    &ldquo;width&rdquo;: 680,
-    &ldquo;height&rdquo;: 60,
-    &ldquo;mark&rdquo;: &ldquo;area&rdquo;,
-    &ldquo;selection&rdquo;: {
-      &ldquo;brush&rdquo;: {&ldquo;type&rdquo;: &ldquo;interval&rdquo;, &ldquo;encodings&rdquo;: [&ldquo;x&rdquo;]}
+    "width": 680,
+    "height": 60,
+    "mark": "area",
+    "selection": {
+      "brush": {"type": "interval", "encodings": ["x"]}
     },
-    &ldquo;encoding&rdquo;: {
-      &ldquo;x&rdquo;: {
-        &ldquo;field&rdquo;: &ldquo;DataInformacao&rdquo;,
-        &ldquo;type&rdquo;: &ldquo;temporal&rdquo;,
-        &ldquo;axis&rdquo;: {&ldquo;format&rdquo;: &ldquo;%Y&rdquo;, &ldquo;title&rdquo;: &ldquo;Anos (2012-2017)&rdquo;}
+    "encoding": {
+      "x": {
+        "field": "DataInformacao",
+        "type": "temporal",
+        "axis": {"format": "%Y", "title": "Anos (2012-2017)"}
       },
-      &ldquo;y&rdquo;: {
-        &ldquo;field&rdquo;: &ldquo;VolumePercentual&rdquo;,
-        &ldquo;type&rdquo;: &ldquo;quantitative&rdquo;,
-        &ldquo;axis&rdquo;: {&ldquo;tickCount&rdquo;: 3, &ldquo;grid&rdquo;: false, &ldquo;title&rdquo;: &ldquo;&rdquo;}
+      "y": {
+        "field": "VolumePercentual",
+        "type": "quantitative",
+        "axis": {"tickCount": 3, "grid": false, "title": ""}
       }
     }
   }]
 };
-    vegaEmbed(&lsquo;#vis&rsquo;, spec).catch(console.warn);
+    vegaEmbed('#vis', spec).catch(console.warn);
 </script>
-</body>
-</html></p>
       </article>
 
       <ul class="pager blog-pager">

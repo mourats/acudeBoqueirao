@@ -167,60 +167,51 @@
       <article role="main" class="blog-post">
         <p></p>
 
-<p><html>
-<head></head>
-<body>
-<h3>
-Em 2017 nós passamos pela maior seca no açude boqueirão desde 1990. E por conta disso, é difícil lembrar da última vez em que o açude sangrou e virou ponto turístico onde as pessoas iam tirar fotos e registrar a fartura de água no açude.</p>
+<p>Em 2017 nós passamos pela maior seca no açude boqueirão desde 1990. E por conta disso, é difícil lembrar da última vez em que o açude sangrou e virou ponto turístico onde as pessoas iam tirar fotos e registrar a fartura de água no açude.</p>
 
 <p>De 1990 até hoje, o açude de boqueirão já sangrou 14 vezes, sendo a ultima vez em agosto de 2011. Crianças de 6 anos de idade nunca viram o açude transbordar! Entre essas sangrias, a maior delas foi a de março de 2008, quando o açude atingiu incríveis 110% de sua capacidade.</p>
 
-<p>Todas essas informações podem ser vistas no gráfico abaixo:
-</h3></p>
+<p>Todas essas informações podem ser vistas no gráfico abaixo:</p>
 
 <div id="vis" width=300></div>
 
-<p><script src="https://cdnjs.cloudflare.com/ajax/libs/vega/3.0.7/vega.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vega/3.0.7/vega.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vega-lite/2.0.1/vega-lite.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vega-embed/3.0.0-rc7/vega-embed.js"></script>
 <script>
-    const spec = {<br />
-  &ldquo;$schema&rdquo;:&ldquo;<a href="https://vega.github.io/schema/vega-lite/v2.json&quot;">https://vega.github.io/schema/vega-lite/v2.json&quot;</a>,
-    &ldquo;data&rdquo;: {<br />
-        &ldquo;url&rdquo;:&ldquo;<a href="https://api.insa.gov.br/reservatorios/12172/monitoramento&quot;">https://api.insa.gov.br/reservatorios/12172/monitoramento&quot;</a>,
-        &ldquo;format&rdquo;: {
-            &ldquo;type&rdquo;: &ldquo;json&rdquo;,
-            &ldquo;property&rdquo;: &ldquo;volumes&rdquo;,
-            &ldquo;parse&rdquo;:{
-              &ldquo;DataInformacao&rdquo;: &ldquo;utc:&lsquo;%d/%m/%Y&rsquo;&rdquo;
+    const spec = {  
+  "$schema":"https://vega.github.io/schema/vega-lite/v2.json",
+    "data": {     
+        "url":"https://api.insa.gov.br/reservatorios/12172/monitoramento",
+        "format": {
+            "type": "json",
+            "property": "volumes",
+            "parse":{
+              "DataInformacao": "utc:'%d/%m/%Y'"
             }
         }
-    },</p>
+    },
+    
+    "transform":[{"filter": {"field": "VolumePercentual", "range":[101,200]
+        }
+       }],
+     "mark": "point",
+     "config": {
+    "point": {
+      "color": "purple",
+      "shape": ""
+    }},
+        "encoding": {
+        "y": {"timeUnit": "yearmonthdate", "field": "DataInformacao", "type": "ordinal", "axis": {"title": ""}},
 
-<pre><code>&quot;transform&quot;:[{&quot;filter&quot;: {&quot;field&quot;: &quot;VolumePercentual&quot;, &quot;range&quot;:[101,200]
-    }
-   }],
- &quot;mark&quot;: &quot;point&quot;,
- &quot;config&quot;: {
-&quot;point&quot;: {
-  &quot;color&quot;: &quot;purple&quot;,
-  &quot;shape&quot;: &quot;&quot;
-}},
-    &quot;encoding&quot;: {
-    &quot;y&quot;: {&quot;timeUnit&quot;: &quot;yearmonthdate&quot;, &quot;field&quot;: &quot;DataInformacao&quot;, &quot;type&quot;: &quot;ordinal&quot;, &quot;axis&quot;: {&quot;title&quot;: &quot;&quot;}},
+            "x":{"field": "VolumePercentual", "type": "quantitative", "axis": {"title": "% Percentual do volume de água"}, "scale": {
+          "domain": [100,111]}
+        }
 
-        &quot;x&quot;:{&quot;field&quot;: &quot;VolumePercentual&quot;, &quot;type&quot;: &quot;quantitative&quot;, &quot;axis&quot;: {&quot;title&quot;: &quot;% Percentual do volume de água&quot;}, &quot;scale&quot;: {
-      &quot;domain&quot;: [100,111]}
-    }
-
-    }
-</code></pre>
-
-<p>};
-    vegaEmbed(&lsquo;#vis&rsquo;, spec).catch(console.warn);
+        }
+};
+    vegaEmbed('#vis', spec).catch(console.warn);
 </script>
-</body>
-</html></p>
       </article>
 
       <ul class="pager blog-pager">
