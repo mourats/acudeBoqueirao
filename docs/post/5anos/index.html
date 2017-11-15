@@ -5,9 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Últimos 5 anos do açude!</title>
-  <meta property="og:title" content="Últimos 5 anos do açude!" />
-  <meta name="twitter:title" content="Últimos 5 anos do açude!" />
+  <title>Quanto o açude diminuiu em seu volume nos últimos cinco anos?</title>
+  <meta property="og:title" content="Quanto o açude diminuiu em seu volume nos últimos cinco anos?" />
+  <meta name="twitter:title" content="Quanto o açude diminuiu em seu volume nos últimos cinco anos?" />
   <meta name="description" content="">
   <meta property="og:description" content="">
   <meta name="twitter:description" content="">
@@ -142,7 +142,7 @@
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="post-heading">
-              <h1>Últimos 5 anos do açude!</h1>
+              <h1>Quanto o açude diminuiu em seu volume nos últimos cinco anos?</h1>
                 
                 
                   <span class="post-meta">
@@ -167,42 +167,74 @@
       <article role="main" class="blog-post">
         <p></p>
 
-<div id="vis" width=300></div>
+<p><html>
+<head></head>
+<body>
+<h3> Tempos de seca! Mas essa seca não pode ter ocorrido do dia pra noite certo? De fato não ocorreu, em janeiro de 2012 o açude estava com 90,8% de sua capacidade, ou seja, 373.600.000 metro cúbicos de água!</p>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vega/3.0.7/vega.js"></script>
+<p>Podemos perceber no gráfico abaixo que nossa água apenas foi se esvaindo durante esses cinco anos, tendo chegado ao percentual de 2,90% em abril desse ano, graças a Transposição do Rio São Francisco esses números estão subindo, e hoje estamos com 9,3% de água.
+</h3>
+<div id="vis" width=300></div></p>
+
+<p><script src="https://cdnjs.cloudflare.com/ajax/libs/vega/3.0.7/vega.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vega-lite/2.0.1/vega-lite.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vega-embed/3.0.0-rc7/vega-embed.js"></script>
 <script>
-    const spec = {  
-  "$schema":"https://vega.github.io/schema/vega-lite/v2.json",
-    "data": {     
-        "url":"https://api.insa.gov.br/reservatorios/12172/monitoramento",
-        "format": {
-            "type": "json",
-            "property": "volumes",
-            "parse":{
-              "DataInformacao": "utc:'%d/%m/%Y'"
+    const spec = {
+  &ldquo;$schema&rdquo;: &ldquo;<a href="https://vega.github.io/schema/vega-lite/v2.json&quot;">https://vega.github.io/schema/vega-lite/v2.json&quot;</a>,
+      &ldquo;data&rdquo;: {<br />
+        &ldquo;url&rdquo;:&ldquo;<a href="https://api.insa.gov.br/reservatorios/12172/monitoramento&quot;">https://api.insa.gov.br/reservatorios/12172/monitoramento&quot;</a>,
+        &ldquo;format&rdquo;: {
+            &ldquo;type&rdquo;: &ldquo;json&rdquo;,
+            &ldquo;property&rdquo;: &ldquo;volumes&rdquo;,
+            &ldquo;parse&rdquo;:{
+              &ldquo;DataInformacao&rdquo;: &ldquo;utc:&lsquo;%d/%m/%Y&rsquo;&rdquo;
             }
         }
     },
-    
-    "transform":[{"filter": {"timeUnit": "year", "field": "DataInformacao", "range":[2012,2017]
+  &ldquo;vconcat&rdquo;: [{
+    &ldquo;width&rdquo;: 680,
+        &ldquo;transform&rdquo;:[{&ldquo;filter&rdquo;: {&ldquo;timeUnit&rdquo;: &ldquo;year&rdquo;, &ldquo;field&rdquo;: &ldquo;DataInformacao&rdquo;, &ldquo;range&rdquo;:[2012,2017]
         }
        }],
-     "mark": "area",
-     "width": 900,
-     "height": 350,
-        "encoding": {
-        
-        "x": {"timeUnit": "yearmonthdate", "field": "DataInformacao", "type": "ordinal", "axis": {"title": ""}},
-          
-        "y": {"field": "Volume", "type": "quantitative", 
-        "axis": {"title": ""}}
-          
+    &ldquo;mark&rdquo;: &ldquo;area&rdquo;,
+    &ldquo;encoding&rdquo;: {
+      &ldquo;x&rdquo;: {
+        &ldquo;field&rdquo;: &ldquo;DataInformacao&rdquo;,
+        &ldquo;type&rdquo;: &ldquo;temporal&rdquo;,
+        &ldquo;scale&rdquo;: {&ldquo;domain&rdquo;: {&ldquo;selection&rdquo;: &ldquo;brush&rdquo;}},
+        &ldquo;axis&rdquo;: {&ldquo;title&rdquo;: &ldquo;&rdquo;}
+      },
+      &ldquo;y&rdquo;: {&ldquo;field&rdquo;: &ldquo;Volume&rdquo;,&ldquo;type&rdquo;: &ldquo;quantitative&rdquo;, &ldquo;title&rdquo;: &ldquo;&rdquo;}
+    }
+  }, {
+        &ldquo;transform&rdquo;:[{&ldquo;filter&rdquo;: {&ldquo;timeUnit&rdquo;: &ldquo;year&rdquo;, &ldquo;field&rdquo;: &ldquo;DataInformacao&rdquo;, &ldquo;range&rdquo;:[2012,2017]
         }
+       }],
+    &ldquo;width&rdquo;: 680,
+    &ldquo;height&rdquo;: 60,
+    &ldquo;mark&rdquo;: &ldquo;area&rdquo;,
+    &ldquo;selection&rdquo;: {
+      &ldquo;brush&rdquo;: {&ldquo;type&rdquo;: &ldquo;interval&rdquo;, &ldquo;encodings&rdquo;: [&ldquo;x&rdquo;]}
+    },
+    &ldquo;encoding&rdquo;: {
+      &ldquo;x&rdquo;: {
+        &ldquo;field&rdquo;: &ldquo;DataInformacao&rdquo;,
+        &ldquo;type&rdquo;: &ldquo;temporal&rdquo;,
+        &ldquo;axis&rdquo;: {&ldquo;format&rdquo;: &ldquo;%Y&rdquo;, &ldquo;title&rdquo;: &ldquo;Anos (2012-2017)&rdquo;}
+      },
+      &ldquo;y&rdquo;: {
+        &ldquo;field&rdquo;: &ldquo;VolumePercentual&rdquo;,
+        &ldquo;type&rdquo;: &ldquo;quantitative&rdquo;,
+        &ldquo;axis&rdquo;: {&ldquo;tickCount&rdquo;: 3, &ldquo;grid&rdquo;: false, &ldquo;title&rdquo;: &ldquo;&rdquo;}
+      }
+    }
+  }]
 };
-    vegaEmbed('#vis', spec).catch(console.warn);
+    vegaEmbed(&lsquo;#vis&rsquo;, spec).catch(console.warn);
 </script>
+</body>
+</html></p>
       </article>
 
       <ul class="pager blog-pager">
