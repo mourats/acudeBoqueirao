@@ -7,7 +7,7 @@ draft: false
 
 <!--more-->
 
-O percentual médio anual de água no açude de Boqueirão de 1990 até 2017 contém informações bem interessantes. Podemos perceber na visualização contida abaixo que o percentual médio de água de 2015 foi muito parecido com o de 1999, entretanto nos anos seguintes essa similaridade não aconteceu. De 2004 até 2011 o açude manteve uma média de 80%-90% de água, e a partir de 2015 começou a secar...
+O percentual médio anual de água no açude de Boqueirão de 1990 até 2017 contém informações bem interessantes. Podemos perceber na visualização contida abaixo que o percentual médio de água de 2015 foi muito parecido com o de 1999, entretanto nos anos seguintes essa similaridade não aconteceu. De 2004 até 2011 o açude manteve uma média de 80%-90% de água, e a partir de 2015 começou a secar.
 
 Também podemos ver que de 1997 para 1998 o açude teve uma queda de quase 50% do seu percentual médio anual. O que será que aconteceu? 
 
