@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <title>Visualização Boqueirão</title>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <h2>Visualização:</h2>
+    </div>
+    <div class="row mychart" id="chart">
+    </div>
+  </div>
+
+  <style>
+
+	.chuvoso {
+      fill: darkBlue;
+      stroke: blue;
+      stroke-width: 3;
+	 }
+	 
+	.seco {
+      fill: aquamarine;
+      stroke: blue;
+      stroke-width: 3;
+    }
+	
+    .mychart text {
+      font: 12px sans-serif;
+      text-anchor: left;
+    }
+  </style>
+
+  <script type="text/javascript">
+    "use strict"
+    function desenhaPontos(dados) {
+
+      
+      var alturaSVG = 400, larguraSVG = 800;
+      var	margin = {top: 10, right: 20, bottom:40, left: 45}, 
+          larguraVis = larguraSVG - margin.left - margin.right,
+          alturaVis = alturaSVG - margin.top - margin.bottom;
+		  
+	  function mes(num) {var str = ''; num === 1? str = 'Jan': num === 2? str = 'Fev': num === 3? str = 'Mar': num === 4? str = 'Abr': num === 5? str = 'Mai': num === 6? str = 'Jun': num === 7? str = 'Jul': num === 8? str = 'Ago': num === 9? str = 'Set': num === 10? str = 'Out': num === 11? str = 'Nov':num === 12? str = 'Dez':0; return str}
+          var grafico = d3.select('#chart') 
+            .append('svg')
+              .attr('width', larguraVis + margin.left + margin.right)
+              .attr('height', alturaVis + margin.top + margin.bottom)
+            .append('g') 
+              .attr('transform', 'translate(' +  margin.left + ',' + margin.top + ')');
+			  
+			  var x = d3.scaleBand()
+                    .domain(dados.map((d, i) => d.noventaPercentil))
+                    .range([0, larguraVis])
+                    .paddingInner(0.2);
+
+			  var y = d3.scaleLinear()
+                    .domain([0, d3.max(dados.map((d, i) => d.dezPercentil))]) 
+                    .range([alturaVis, 0]);
+
+			  grafico.selectAll('g')
+                  .data(dados)
+                  .enter()
+                    .append('circle')
+                      .attr('cx', d => x(d.noventaPercentil) + margin.left)  
+                      .attr('cy', d => y(d.dezPercentil) + margin.top)
+                      .attr('r', d => d.mediana/5)
+					  .attr('class', d => d.mes > 4 ? "seco": "chuvoso");
+					  
+			grafico.selectAll('g')
+				.data(dados)
+				.enter()
+				.append('text')
+				.attr("x", d => x(d.noventaPercentil) + 35)
+				.attr("y", d => y(d.dezPercentil) + 45)
+				.text(d => mes(d.mes));
+				
+			  grafico.append("g")
+                  .attr("class", "x axis")
+                  .attr("transform", "translate(0," + alturaVis + ")")
+                  .call(d3.axisBottom(x)); 
+				  
+			grafico.append('g')
+                  .attr('transform', 'translate(0,0)')
+                  .call(d3.axisLeft(y))  
+
+		   grafico.append("text")
+            .attr("transform", "translate(-36 ," + (alturaVis + margin.top)/2 + ") rotate(-90)")
+            .text("90-Percentil");
+			
+		   grafico.append("text")
+            .attr("transform", "translate(300 ," + (larguraVis + margin.left )/2 + ") rotate(0)")
+            .text("10-Percentil");
+    }
+
+    d3.json('dados/boqueirao-por-mes.json', function(dados) {
+      desenhaPontos(dados);
+    });
+
+  </script>
+</body>
+
+</html>

@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>thiago.moura@ccc.ufcg.edu.br (Thiago Moura)</managingEditor>
     <webMaster>thiago.moura@ccc.ufcg.edu.br (Thiago Moura)</webMaster>
-    <lastBuildDate>Wed, 15 Nov 2017 16:29:39 -0300</lastBuildDate>
+    <lastBuildDate>Wed, 29 Nov 2017 23:00:09 -0300</lastBuildDate>
     
 	<atom:link href="https://thiagosantos18.github.io/acudeBoqueirao/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Lab 02 Parte 2 - Visualização do açude de boqueirão com D3</title>
+      <link>https://thiagosantos18.github.io/acudeBoqueirao/post/boqueiraod3/</link>
+      <pubDate>Wed, 29 Nov 2017 23:00:09 -0300</pubDate>
+      <author>thiago.moura@ccc.ufcg.edu.br (Thiago Moura)</author>
+      <guid>https://thiagosantos18.github.io/acudeBoqueirao/post/boqueiraod3/</guid>
+      <description>Visualização Boqueirão       .chuvoso { fill: darkBlue; stroke: blue; stroke-width: 3; } .seco { fill: aquamarine; stroke: blue; stroke-width: 3; } .mychart text { font: 12px sans-serif; text-anchor: left; }  &#34;use strict&#34; function desenhaPontos(dados) { // definicoes de altura e largura do svg e da vis dentro var alturaSVG = 400, larguraSVG = 800; var	margin = {top: 10, right: 20, bottom:40, left: 45}, // para descolar a vis das bordas do grafico larguraVis = larguraSVG - margin.</description>
+    </item>
     
     <item>
       <title>Acompanhe o volume do açude em percentuais médios anuais desde 1990!</title>

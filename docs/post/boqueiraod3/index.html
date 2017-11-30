@@ -5,21 +5,24 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Posts</title>
-  <meta property="og:title" content="Posts" />
-  <meta name="twitter:title" content="Posts" />
+  <title>Lab 02 Parte 2 - Visualização do açude de boqueirão com D3</title>
+  <meta property="og:title" content="Lab 02 Parte 2 - Visualização do açude de boqueirão com D3" />
+  <meta name="twitter:title" content="Lab 02 Parte 2 - Visualização do açude de boqueirão com D3" />
+  <meta name="description" content="Visualização Boqueirão       .chuvoso { fill: darkBlue; stroke: blue; stroke-width: 3; } .seco { fill: aquamarine; stroke: blue; stroke-width: 3; } .mychart text { font: 12px sans-serif; text-anchor: left; }  &#34;use strict&#34; function desenhaPontos(dados) { // definicoes de altura e largura do svg e da vis dentro var alturaSVG = 400, larguraSVG = 800; var	margin = {top: 10, right: 20, bottom:40, left: 45}, // para descolar a vis das bordas do grafico larguraVis = larguraSVG - margin.">
+  <meta property="og:description" content="Visualização Boqueirão       .chuvoso { fill: darkBlue; stroke: blue; stroke-width: 3; } .seco { fill: aquamarine; stroke: blue; stroke-width: 3; } .mychart text { font: 12px sans-serif; text-anchor: left; }  &#34;use strict&#34; function desenhaPontos(dados) { // definicoes de altura e largura do svg e da vis dentro var alturaSVG = 400, larguraSVG = 800; var	margin = {top: 10, right: 20, bottom:40, left: 45}, // para descolar a vis das bordas do grafico larguraVis = larguraSVG - margin.">
+  <meta name="twitter:description" content="Visualização Boqueirão       .chuvoso { fill: darkBlue; stroke: blue; stroke-width: 3; } .seco { fill: aquamarine; stroke: blue; stroke-width: 3; } .mychart text { font: 12px sans-serif; text-anchor: …">
   <meta name="author" content="Thiago Moura"/>
   <link href='https://thiagosantos18.github.io/acudeBoqueirao/img/favicon.ico' rel='icon' type='image/x-icon'/>
   <meta property="og:image" content="https://thiagosantos18.github.io/acudeBoqueirao/img/avatar-icon.png" />
   <meta name="twitter:image" content="https://thiagosantos18.github.io/acudeBoqueirao/img/avatar-icon.png" />
   <meta name="twitter:card" content="summary" />
-  <meta property="og:url" content="https://thiagosantos18.github.io/acudeBoqueirao/post/" />
+  <meta property="og:url" content="https://thiagosantos18.github.io/acudeBoqueirao/post/boqueiraod3/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Açude de Boqueirão" />
 
   <meta name="generator" content="Hugo 0.30.2" />
-  <link rel="canonical" href="https://thiagosantos18.github.io/acudeBoqueirao/post/" />
-  <link rel="alternate" href="https://thiagosantos18.github.io/acudeBoqueirao/post/index.xml" type="application/rss+xml" title="Açude de Boqueirão">
+  <link rel="canonical" href="https://thiagosantos18.github.io/acudeBoqueirao/post/boqueiraod3/" />
+  <link rel="alternate" href="" type="application/rss+xml" title="Açude de Boqueirão">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -122,14 +125,33 @@
 
 
     
+  
+  
+  
+
+
+
+
+  
+
   <header class="header-section ">
+    
     <div class="intro-header no-img">
+      
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <div class="page-heading">
-              <h1>Posts</h1>
-              <hr class="small">
+            <div class="post-heading">
+              <h1>Lab 02 Parte 2 - Visualização do açude de boqueirão com D3</h1>
+                
+                
+                  <span class="post-meta">
+  Posted on 23 Novembro, 29117
+  
+</span>
+
+
+                
             </div>
           </div>
         </div>
@@ -137,102 +159,137 @@
     </div>
   </header>
 
+
     
-  <div class="container" role="main">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        
-        <div class="posts-list">
-          
-            <article class="post-preview">
-              <a href="https://thiagosantos18.github.io/acudeBoqueirao/post/boqueiraod3/">
-                <h2 class="post-title">Lab 02 Parte 2 - Visualização do açude de boqueirão com D3</h2>
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <!--more-->
 
-                
-              </a>
+<html lang="pt-br">
 
-              <p class="post-meta">
-                Posted on 23 Novembro, 29117
-              </p>
-              <div class="post-entry">
-                
-                  Visualização Boqueirão       .chuvoso { fill: darkBlue; stroke: blue; stroke-width: 3; } .seco { fill: aquamarine; stroke: blue; stroke-width: 3; } .mychart text { font: 12px sans-serif; text-anchor: left; }  "use strict" function desenhaPontos(dados) { // definicoes de altura e largura do svg e da vis dentro var alturaSVG = 400, larguraSVG = 800; var	margin = {top: 10, right: 20, bottom:40, left: 45}, // para descolar a vis das bordas do grafico larguraVis = larguraSVG - margin.
-                  <a href="https://thiagosantos18.github.io/acudeBoqueirao/post/boqueiraod3/" class="post-read-more">[Read More]</a>
-                
-              </div>
+<head>
+  <meta charset="utf-8">
+  <title>Visualização Boqueirão</title>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
 
-              
-
-            </article>
-          
-            <article class="post-preview">
-              <a href="https://thiagosantos18.github.io/acudeBoqueirao/post/mediasanuais/">
-                <h2 class="post-title">Acompanhe o volume do açude em percentuais médios anuais desde 1990!</h2>
-
-                
-              </a>
-
-              <p class="post-meta">
-                Posted on 16 Novembro, 15117
-              </p>
-              <div class="post-entry">
-                
-                  <p></p>
-                  <a href="https://thiagosantos18.github.io/acudeBoqueirao/post/mediasanuais/" class="post-read-more">[Read More]</a>
-                
-              </div>
-
-              
-
-            </article>
-          
-            <article class="post-preview">
-              <a href="https://thiagosantos18.github.io/acudeBoqueirao/post/5anos/">
-                <h2 class="post-title">Quanto o açude diminuiu em seu volume nos últimos cinco anos?</h2>
-
-                
-              </a>
-
-              <p class="post-meta">
-                Posted on 16 Novembro, 15117
-              </p>
-              <div class="post-entry">
-                
-                  <p></p>
-                  <a href="https://thiagosantos18.github.io/acudeBoqueirao/post/5anos/" class="post-read-more">[Read More]</a>
-                
-              </div>
-
-              
-
-            </article>
-          
-            <article class="post-preview">
-              <a href="https://thiagosantos18.github.io/acudeBoqueirao/post/sangria/">
-                <h2 class="post-title">Quantas vezes o açude sangrou desde 1990?</h2>
-
-                
-              </a>
-
-              <p class="post-meta">
-                Posted on 16 Novembro, 15117
-              </p>
-              <div class="post-entry">
-                
-                  <p></p>
-                  <a href="https://thiagosantos18.github.io/acudeBoqueirao/post/sangria/" class="post-read-more">[Read More]</a>
-                
-              </div>
-
-              
-
-            </article>
-          
-        </div>
-        
-      </div>
+<body>
+  <div class="container">
+    <div class="row mychart" id="chart">
     </div>
   </div>
+
+  <style>
+
+	.chuvoso {
+      fill: darkBlue;
+      stroke: blue;
+      stroke-width: 3;
+	 }
+	 
+	.seco {
+      fill: aquamarine;
+      stroke: blue;
+      stroke-width: 3;
+    }
+	
+    .mychart text {
+      font: 12px sans-serif;
+      text-anchor: left;
+    }
+  </style>
+
+  <script type="text/javascript">
+    "use strict"
+    function desenhaPontos(dados) {
+
+      // definicoes de altura e largura do svg e da vis dentro
+      var alturaSVG = 400, larguraSVG = 800;
+      var	margin = {top: 10, right: 20, bottom:40, left: 45}, // para descolar a vis das bordas do grafico
+          larguraVis = larguraSVG - margin.left - margin.right,
+          alturaVis = alturaSVG - margin.top - margin.bottom;
+		  
+	  function mes(num) {var str = ''; num === 1? str = 'Jan': num === 2? str = 'Fev': num === 3? str = 'Mar': num === 4? str = 'Abr': num === 5? str = 'Mai': num === 6? str = 'Jun': num === 7? str = 'Jul': num === 8? str = 'Ago': num === 9? str = 'Set': num === 10? str = 'Out': num === 11? str = 'Nov':num === 12? str = 'Dez':0; return str}
+          var grafico = d3.select('#chart') // cria elemento <svg> com um <g> dentro
+            .append('svg')
+              .attr('width', larguraVis + margin.left + margin.right)
+              .attr('height', alturaVis + margin.top + margin.bottom)
+            .append('g') 
+              .attr('transform', 'translate(' +  margin.left + ',' + margin.top + ')');
+			  
+			  var x = d3.scaleBand()
+                    .domain(dados.map((d, i) => d.noventaPercentil))
+                    .range([0, larguraVis])
+                    .paddingInner(0.2);
+
+			  var y = d3.scaleLinear()
+                    .domain([0, d3.max(dados.map((d, i) => d.dezPercentil))]) // Configure essa escala com domain e range OK
+                    .range([alturaVis, 0]);
+
+			  grafico.selectAll('g')
+                  .data(dados)
+                  .enter()
+                    .append('circle')
+                      .attr('cx', d => x(d.noventaPercentil) + margin.left)  
+                      .attr('cy', d => y(d.dezPercentil) + margin.top)
+                      .attr('r', d => d.mediana/5)
+					  .attr('class', d => d.mes > 4 ? "seco": "chuvoso");
+					  
+			grafico.selectAll('g')
+				.data(dados)
+				.enter()
+				.append('text')
+				.attr("x", d => x(d.noventaPercentil) + 35)
+				.attr("y", d => y(d.dezPercentil) + 45)
+				.text(d => mes(d.mes));
+				
+			  grafico.append("g")
+                  .attr("class", "x axis")
+                  .attr("transform", "translate(0," + alturaVis + ")")
+                  .call(d3.axisBottom(x)); // magica do d3: gera eixo a partir da escala
+				  
+			grafico.append('g')
+                  .attr('transform', 'translate(0,0)')
+                  .call(d3.axisLeft(y))  // gera eixo a partir da escala
+
+		   grafico.append("text")
+            .attr("transform", "translate(-36 ," + (alturaVis + margin.top)/2 + ") rotate(-90)")
+            .text("90-Percentil");
+			
+		   grafico.append("text")
+            .attr("transform", "translate(300 ," + (larguraVis + margin.left )/2 + ") rotate(0)")
+            .text("10-Percentil");
+    }
+
+    d3.json('https://thiagosantos18.github.io/intro-d3/dados/boqueirao-por-mes.json', function(dados) {
+      desenhaPontos(dados);
+    });
+
+  </script>
+</body>
+
+</html>
+      </article>
+
+      <ul class="pager blog-pager">
+        
+          <li class="previous">
+            <a href="https://thiagosantos18.github.io/acudeBoqueirao/post/mediasanuais/" data-toggle="tooltip" data-placement="top" title="Acompanhe o volume do açude em percentuais médios anuais desde 1990!">&larr; Previous Post</a>
+          </li>
+        
+        
+      </ul>
+
+      
+        
+      
+
+    </div>
+  </div>
+</div>
 
     <footer>
   <div class="container">
@@ -274,7 +331,7 @@
               </li>
           
           <li>
-            <a href="https://thiagosantos18.github.io/acudeBoqueirao/post/index.xml" title="RSS">
+            <a href="" title="RSS">
               <span class="fa-stack fa-lg">
                 <i class="fa fa-circle fa-stack-2x"></i>
                 <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
